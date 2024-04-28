@@ -19,7 +19,6 @@
                 <div class="navbar">
                     <div>
                         <h3>アカウント情報</h3>
-
                     </div>
                     @if (Session::has('success'))
                         <div class="alert alert-success">

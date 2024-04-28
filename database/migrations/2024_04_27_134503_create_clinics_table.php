@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('start_minute')->nullable();
             $table->string('end_hour')->nullable();
             $table->string('end_minute')->nullable();
-
             $table->timestamps();
         });
     }

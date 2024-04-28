@@ -163,16 +163,12 @@ a:hover{
     padding: 5px;
     cursor: pointer;
 }
-.holidayContainer {
+.holiday {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-}
-.timeDetails{
-    /* max-width: 640px; */
-    /* margin: 0 auto; */
 }
 .holiday p {
     background-color: red;
@@ -200,7 +196,6 @@ a:hover{
     margin: 20px;
 }
 .addedTime{
-
     display: flex;
     gap: 20px;
     justify-content: space-between;

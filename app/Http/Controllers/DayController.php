@@ -16,12 +16,6 @@ class DayController extends Controller
         Session::flash('success', 'Set Holiday Successful');
         return redirect()->back();
     }
-    public function show($clinicId)
-    {
-        $holidays = Day::where('is_holiday', true)->where('clinic_id', $clinicId)->get();
-        return response()->json($holidays);
-    }
-
 
     public function cancel($id){
         $day = Day::findOrFail($id);
@@ -29,21 +23,6 @@ class DayController extends Controller
         $day->save();
         Session::flash('success', 'Cancel Holiday Successful');
         return redirect()->back();
-    }
-
-    public function getHoliday($clinicId, $dayId)
-    {
-        try {
-            // Fetch holiday information based on clinic ID and day ID
-            $holiday = Day::where('clinic_id', $clinicId)->where('id', $dayId)->get();
-
-            // Return holiday information as JSON response
-            return response()->json($holiday);
-        } catch (\Exception $e) {
-            // Handle any exceptions and return an error response
-            return response()->json(['error' => 'Failed to fetch holiday information.'], 500);
-        }
-
     }
 
 }

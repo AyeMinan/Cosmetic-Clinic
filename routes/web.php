@@ -28,7 +28,6 @@ Route::middleware([MustbeAuthUser::class])->group(function () {
 
     Route::patch('/setHoliday/{id}', [DayController::class, 'update']);
     Route::patch('/cancelHoliday/{id}', [DayController::class, 'cancel']);
-    Route::get('/holiday/{id}', [DayController::class, 'show']);
 
     Route::resource('vacation', VacationController::class)->only(['index', 'store', 'destroy', 'show']);
 

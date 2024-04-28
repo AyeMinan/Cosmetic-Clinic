@@ -24,19 +24,12 @@ class TimeController extends Controller
         return $time;
     }
 
-    public function show(Request $request, $clinicId)
-    {
-
-        $times = AddTime::where('clinic_id', $clinicId)->get();
-        return response()->json($times);
-    }
     public function store(TimeRequest $timeRequest)
     {
         $validatedData = $timeRequest->validated();
         $data = $this->timeService->storeTime($validatedData);
         return $data;
     }
-
 
     public function update($id)
     {

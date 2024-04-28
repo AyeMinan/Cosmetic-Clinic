@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('end_hour');
             $table->string('end_minute');
             $table->unsignedBigInteger('clinic_id');
-            $table->boolean('is_saved')->default(false);
             $table->timestamps();
         });
     }
