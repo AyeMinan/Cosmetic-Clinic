@@ -64,7 +64,6 @@
     </div>
     <x-modal></x-modal>
     <script>
-
         function confirmDelete(start_date, end_date, reason, id) {
             var confirmationText = 'test.jpの内容\n\n' +
                 start_date + ' ~ ' + end_date + '\n' +
@@ -96,6 +95,28 @@
 
                 clinicIdInput.value = this.value;
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var clinicSelect = document.getElementById('clinic');
+            var clinicIdInput = document.getElementById('clinic_id');
+
+            var storedClinicId = localStorage.getItem('selectedClinicId');
+            if (storedClinicId) {
+                clinicIdInput.value = storedClinicId;
+                clinicSelect.value = storedClinicId;
+            } else {
+                clinicIdInput.value = clinicSelect.value;
+            }
+
+            clinicSelect.addEventListener('change', function() {
+
+                clinicIdInput.value = this.value;
+                localStorage.setItem('selectedClinicId', this.value);
+            });
+
+            showVacations(clinicIdInput.value);
         });
 
         function showVacations(clinicId) {
