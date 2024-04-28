@@ -31,14 +31,6 @@ class TimeController extends Controller
         return $data;
     }
 
-    public function update($id)
-    {
-        $time = AddTime::findOrFail($id);
-        $time->is_saved = true;
-        $time->save();
-        Session::flash('success', 'Save Changes Successful');
-        return redirect()->back();
-    }
     public function destroy($id)
     {
         try {

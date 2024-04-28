@@ -21,12 +21,6 @@ class VacationController extends Controller
         $vacation = $this->vacationService->getVacation();
         return $vacation;
     }
-
-    public function show($clinicId)
-    {
-        $vacations = Vacation::where('clinic_id', $clinicId)->get();
-        return response()->json($vacations);
-    }
     public function store(VacationRequest $vacationRequest)
     {
 

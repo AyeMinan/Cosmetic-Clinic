@@ -29,9 +29,9 @@ Route::middleware([MustbeAuthUser::class])->group(function () {
     Route::patch('/setHoliday/{id}', [DayController::class, 'update']);
     Route::patch('/cancelHoliday/{id}', [DayController::class, 'cancel']);
 
-    Route::resource('vacation', VacationController::class)->only(['index', 'store', 'destroy', 'show']);
+    Route::resource('vacation', VacationController::class)->only(['index', 'store', 'destroy']);
 
     Route::resource('account', UserController::class);
 
-    Route::resource('time', TimeController::class)->only('index', 'store', 'destroy', 'show', 'update');
+    Route::resource('time', TimeController::class)->only('index', 'store', 'destroy');
 });
