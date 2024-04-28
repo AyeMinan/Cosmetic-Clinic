@@ -1,0 +1,318 @@
+body {
+    background-color: antiquewhite;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.loginbox {
+    height: auto;
+    max-width: 600px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginbox label {
+    display: inline-block;
+    padding: 5px;
+}
+
+ .loginbox input {
+    width: calc(80% - 20px);
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+}
+.loginbox p {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.login button {
+    padding: 5px;
+    width: 30%;
+    margin: 10px 0;
+}
+.text-danger{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .loginbox {
+        width: 90%;
+    }
+}
+
+.screen {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    padding: 10px;
+    background-color: #007bff;
+    color: #000000;
+}
+.right{
+    flex:2;
+}
+
+.left h3, .right h3 {
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.logout{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 0.5s;
+
+
+}
+a:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.5s;
+}
+.clinic{
+    padding: 10px;
+    width: auto;
+
+}
+.clinic select{
+    font-size: 1.2rem;
+}
+.clinic option{
+    font-size: 1.1em;
+}
+.start-hour, .end-hour{
+    padding: 5px;
+    width: auto;
+}
+.start-minute, .end-minute{
+    padding: 5px;
+    width: auto;
+}
+.customMinute input{
+    width: calc(20% -10px);
+}
+.addTimeButton{
+    padding: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.deleteTime{
+    color: red;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border: none;
+    background-color: beige;
+}
+
+.setHoliday{
+    padding: 5px;
+    cursor: pointer;
+}
+.holidayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.timeDetails{
+    /* max-width: 640px; */
+    /* margin: 0 auto; */
+}
+.holiday p {
+    background-color: red;
+    width: 365px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.saveChanges{
+   display: flex;
+   justify-items: center;
+   margin: 20px 30px;
+   float: right;
+
+}
+.day{
+    margin: 0 20px;
+}
+.timeContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    margin: 20px;
+}
+.addedTime{
+
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+}
+.accountTable{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.changePassword
+{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.deleteBtn{
+    background-color: red;
+    cursor: pointer;
+}
+.deleteBtn:hover{
+    background-color: rgb(176, 31, 60);
+    color: beige;
+    transition: 0.5s;
+}
+.buttongp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.emailAddress{
+    max-width: 400px;
+    text-align: center;
+}
+.newAccount {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: beige;
+    text-align: center;
+}
+
+.emailContainer {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.emailContainer label {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 120px;
+    vertical-align: top;
+}
+
+.emailContainer p {
+    display: inline-block;
+    margin: 0px 0px 0px 20px;
+    vertical-align: top;
+}
+
+.newAccount input {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+}
+
+.newAccount button {
+    margin-top: 10px;
+}
+.addAccountContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+.addAccountContainer button{
+    background-color: #007bff;
+    color: white;
+}
+.addAccountContainer button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.alert {
+    color: green;
+}
+.save{
+    cursor: pointer;
+
+
+}
+.save:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+    .holiday p {
+        width: 100%;
+        max-width: 300px;
+    }
+    .timeDetails {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .screen {
+        max-width: 90%;
+        padding: 10px;
+    }
+    .timeContainer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
